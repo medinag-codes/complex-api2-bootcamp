@@ -1,25 +1,37 @@
 document.querySelector('button').addEventListener('click', getWizard)
-
+const section = document.querySelector('section')
 
 function getWizard(){
-    const wizard = document.querySelector('input').value
-    const url = `https://potterapi-fedeperin.vercel.app/en/characters?search=${wizard}`
+    const name = document.querySelector('input').value
+    const url = `https://potterapi-fedeperin.vercel.app/en/houses/random`
+
+    document.querySelector('input').value = ""
+    document.querySelector('section').innerHTML = ""
 
     fetch(url)
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            document.querySelector('h2').innerText = data[0].fullName
-            document.querySelector('img').src = data[0].image
+            const house = data.house
+            document.querySelector('h2').innerText = `${name} is sorted to ${house}!`
+            document.querySelector('h4').innerText = `Mascot: ${data.emoji}`
 
-            const spellUrl = `https://hp-api.onrender.com/api/spells`
+            const housemateUrl = `https://hp-api.onrender.com/api/characters/house/${house}`
 
-            fetch(spellUrl)
+            fetch(housemateUrl)
             .then(res => res.json())
-            .then(spell => {
-            console.log(spell)
-            document.querySelector('h3').innerText = spell[3].name
-            document.querySelector('h4').innerText = spell[3].description
+            .then(housemate => {
+            console.log(housemate)
+            for(let i = 0; i < 5; i++){
+                let img = document.createElement('img')
+                console.log(img)
+                img.src = housemate[i].image
+                section.appendChild(img)
+                img.style.height = '325px'
+                img.style.margin = '10px'
+                img.style.borderRadius = '10px'
+                document.querySelector('h3').innerText = "Some great wizards in your house:"
+            }
             })
             .catch(err => {
                 console.log(`error ${err}`)

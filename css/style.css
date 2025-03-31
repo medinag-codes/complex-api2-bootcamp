@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: rgb(133, 109, 109);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 100px;
+    color: goldenrod;
+    background-color: rgb(131, 85, 85);
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 3px solid goldenrod;
+}
+
+.sorting{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+input{
+    height: 30px;
+    width: 25%;
+
+}
+
+button{
+    height: 30px;
+    border-radius: 5px;
+    background-color: goldenrod;
+}
+
+.decision{
+    margin-top: 50px;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.8em;
+}
+
+.houseWizards{
+    margin-top: 150px;
+}
