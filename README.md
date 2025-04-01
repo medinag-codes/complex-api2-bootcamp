@@ -3,7 +3,7 @@ This is a website I made to get searched Harry Potter Character and a random spe
 
 **Link to project:** []
 
-![Complex API 2](/images/Complex%20API%202%20-%20Result.png)
+![Complex API 2](/images/Complex%20API%202%20-%20Return.png)
 
 ## How It's Made:
 
