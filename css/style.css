@@ -6,15 +6,19 @@
 }
 
 body{
-    background-color: rgb(133, 109, 109);
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/736x/c8/98/1f/c8981fed4fe843c24306885616bb45b1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 header{
     height: 100px;
     color: goldenrod;
-    background-color: rgb(131, 85, 85);
+    background-color: rgb(112, 79, 60);
     font-size: 2rem;
     text-align: center;
     border-bottom: 3px solid goldenrod;
